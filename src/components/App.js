@@ -1,14 +1,23 @@
 import React, {useEffect, useState} from "react";
 import "../App.css";
 import axios from 'axios';
+import { BASE_URL, API_DATA } from '../constants/apiInfo'
+import Header from './header.js'
 
 function App() {
-  const [imgObj]
+  const [imgObj, setImgObj] = useState(API_DATA);
+  //Uncomment below to test with actual API Data - Threw in work around so I wouldn't clock out my Base API Key 
   // useEffect(() => {
-  //   axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-  //   .then(res => console.log(res))
-  //   .catch(err => {debugger})
-  // }, [])
+  //   axios.get(BASE_URL)
+  //   .then(res => {
+  //     setImgObj(res.data)
+  //   })
+  //   .catch(err => {
+  //     debugger
+  //   })
+  // }, []);
+
+  // console.log(imgObj);
   
   return (
     <div className="App">
@@ -16,6 +25,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
+      <Header date={imgObj.date}/>
     </div>
   );
 }
