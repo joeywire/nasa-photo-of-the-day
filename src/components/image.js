@@ -1,7 +1,16 @@
-import React  from 'react';
+import React, {useState} from 'react';
 
-function nasaImage (props) {
-    const [imageURL]
+function NasaImage (props) {
+    const {imgURL, hdImgURL, explanation} = props;
+    const [url, setUrl] = useState("")
+
+    return(
+        <div className='imgContainer'>
+            <img src={url} />
+            <p>{explanation}</p>
+        </div>
+    );
+
 };
 
-export default nasaImage;
+export default NasaImage;

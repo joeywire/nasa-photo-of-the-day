@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import { BASE_URL } from '../constants/apiInfo';
 
 function Header(props) {

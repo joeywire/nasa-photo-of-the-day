@@ -3,6 +3,8 @@ import "../App.css";
 import axios from 'axios';
 import { BASE_URL, API_DATA } from '../constants/apiInfo'
 import Header from './header.js'
+import NasaImage from './image.js'
+import ImageInfo from './imageInfo'
 
 function App() {
   const [imgObj, setImgObj] = useState(API_DATA);
@@ -19,6 +21,7 @@ function App() {
 
   // console.log(imgObj);
   
+  
   return (
     <div className="App">
       <p>
@@ -26,6 +29,8 @@ function App() {
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
       <Header date={imgObj.date}/>
+      <ImageInfo author={imgObj.copyright} title={imgObj.title}/>
+      <NasaImage imgURL={imgObj.url} hdImgUrl={imgObj.hdurl} explanation={imgObj.explanation}/>
     </div>
   );
 }
