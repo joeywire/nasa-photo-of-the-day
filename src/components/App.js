@@ -7,8 +7,9 @@ import NasaImage from './image.js'
 import ImageInfo from './imageInfo'
 
 function App() {
-  const [imgObj, setImgObj] = useState(API_DATA);
+  const[imgObj, setImgObj] = useState(API_DATA);
   //Uncomment below to test with actual API Data - Threw in work around so I wouldn't clock out my Base API Key 
+  // const [imgObj, setImgObj] = useState({});
   // useEffect(() => {
   //   axios.get(BASE_URL)
   //   .then(res => {
@@ -20,7 +21,7 @@ function App() {
   // }, []);
 
   // console.log(imgObj);
-  
+
   
   return (
     <div className="App">
