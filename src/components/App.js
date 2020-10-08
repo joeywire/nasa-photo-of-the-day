@@ -22,16 +22,15 @@ function App() {
 
   // console.log(imgObj);
 
+
+
+
   
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
       <Header date={imgObj.date}/>
       <ImageInfo author={imgObj.copyright} title={imgObj.title}/>
-      <NasaImage imgURL={imgObj.url} hdImgUrl={imgObj.hdurl} explanation={imgObj.explanation}/>
+      <NasaImage imgURL={imgObj.url} hdImgURL={imgObj.hdurl} explanation={imgObj.explanation}/>
     </div>
   );
 }
